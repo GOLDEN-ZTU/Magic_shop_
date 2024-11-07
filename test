@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Камінь Часу",
+    "price": 12000,
+    "description": "Цей невеликий камінь може затримувати або прискорювати час навколо свого власника на короткий період. Потребує значних зусиль і працює лише раз на день.",
+    "category": "magical items",
+    "image": "https://cdn.prod.website-files.com/6392c7d008f156866c2cca33/63d9eef17c3b01c0faeaf983_time-stone-s.webp",
+    "rating": {
+      "rate": 4.8,
+      "count": 45
+    }
+  },
+  {
+    "id": 2,
+    "title": "Книга Забутих Історій",
+    "price": 8500,
+    "description": "Книга, що містить забуті легенди та знання, які більше ніде не знайти. Високий інтерес для магів і дослідників.",
+    "category": "magical items",
+    "image": "https://static8.depositphotos.com/1329758/823/i/450/depositphotos_8233454-stock-photo-old-book.jpg",
+    "rating": {
+      "rate": 4.7,
+      "count": 123
+    }
+  },
+  {
+    "id": 3,
+    "title": "Кришталь Бачення",
+    "price": 15000,
+    "description": "Прозорий кристал, що дозволяє побачити далекі місця або події минулого і майбутнього, але з ризиком для зору.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/14/20/4c/14204c1134bf051281d7ec65e1e1be1a.jpg",
+    "rating": {
+      "rate": 4.9,
+      "count": 63
+    }
+  },
+  {
+    "id": 4,
+    "title": "Перстень Безсмертя",
+    "price": 50000,
+    "description": "Витончений перстень, що дарує невразливість, але тільки поки власник дотримується своїх моральних принципів.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/1200x/1d/ae/1e/1dae1e583d3c57886a99c5163ae08f9a.jpg",
+    "rating": {
+      "rate": 4.6,
+      "count": 25
+    }
+  },
+  {
+    "id": 5,
+    "title": "Щит Душі",
+    "price": 25000,
+    "description": "Легендарний щит, що захищає не лише тіло, але й душу власника, відштовхуючи прокляття та темну магію.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/6a/33/ff/6a33ffef4f8d4db79f74aa18f7b53189.jpg",
+    "rating": {
+      "rate": 4.8,
+      "count": 150
+    }
+  },
+  {
+    "id": 6,
+    "title": "Ключ Мандрівника",
+    "price": 30000,
+    "description": "Ключ, що відкриває будь-які двері та веде до різних світів, але його сила зменшується після кожного використання.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/00/e6/d5/00e6d5e1fa4ebe9ee6af1ae5733cca07.jpg",
+    "rating": {
+      "rate": 4.5,
+      "count": 47
+    }
+  },
+  {
+    "id": 7,
+    "title": "Золотий Кубок Пам'яті",
+    "price": 10000,
+    "description": "Кубок, що дозволяє зберігати та повертати цінні спогади, але зловживання може призвести до втрати пам'яті.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/d9/3c/27/d93c277903538713ca1d9e54f0407db4.jpg",
+    "rating": {
+      "rate": 4.3,
+      "count": 93
+    }
+  },
+  {
+    "id": 8,
+    "title": "Мантия Тіней",
+    "price": 18000,
+    "description": "Чорна мантия, що дозволяє носію зливатися з тінями, стаючи невидимим, проте діє тільки у темряві.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/c5/1f/97/c51f97b8d92d6b8d31f89cff22ad457a.jpg",
+    "rating": {
+      "rate": 4.9,
+      "count": 76
+    }
+  },
+  {
+    "id": 9,
+    "title": "Дзеркало Бажань",
+    "price": 14000,
+    "description": "Дзеркало, яке показує найзаповітніше бажання власника через складні метафори, вимагаючи точного тлумачення.",
+    "category": "magical items",
+    "image": "https://i.pinimg.com/564x/7e/1c/b5/7e1cb595b10b3fa6eefe4d2e24d4a723.jpg",
+    "rating": {
+      "rate": 4.4,
+      "count": 60
+    }
+  }
+]

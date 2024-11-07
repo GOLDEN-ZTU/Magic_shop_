@@ -1,5 +1,5 @@
 const getProducts = async () => {
-  const response = await fetch("https://fakestoreapi.com/products?limit=9");
+  const response = await fetch("test");
   const products = await response.json();
   return products;
 };
@@ -23,7 +23,7 @@ const renderProducts = async () => {
     productTitle.innerText = item.title;
     productDescription.innerText = item.description;
     productPrice.innerText = `${item.price}$`;
-    productBuyBtn.innerText = "Add to cart";
+    productBuyBtn.innerText = "Додати в кошик";
     productBuyBtn.addEventListener("click", () => addToCart(item));
     //
     productPriceSection.append(productPrice, productBuyBtn);
