@@ -28,8 +28,7 @@ ul {
   height: 440px;
   text-align: center;
   margin-bottom: 30px;
-  outline-style: ridge;
-  outline-color:grey;
+  outline: ridge grey;
   border-radius: 5px;
   transition: 0.3s;
   padding: 10px;
@@ -55,7 +54,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
-
 }
 
 .product-item-price > span {
@@ -76,12 +74,11 @@ ul {
   background-color: #0dc00d;
 }
 
-
-
 .cart {
   text-align: center;
-  outline-style: solid;
+  outline: solid 2px grey;
   border-radius: 5px;
+  padding: 20px;
   transition: 0.3s;
   display: flex;
   flex-direction: column;
@@ -98,24 +95,29 @@ ul {
   flex-direction: column;
   border-radius: 5px;
   transition: 0.3s;
-  outline-style: solid
+  outline: solid 2px grey;
 }
 
 .cart-list-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
   text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 .cart-list-titles {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid black;
+  padding-bottom: 10px;
 }
 
 .cart-list-titles > h4 {
-  padding-bottom: 10px;
-  border-bottom: 2px solid black;
+  flex: 1;
+  text-align: center;
 }
 
 .cart-list-item-section {
@@ -177,12 +179,12 @@ ul {
 .total-amount {
   text-align: right;
   font-weight: normal;
-  outline-style: solid;
-  width:300px;
+  width: 300px;
   padding: 10px;
   border-radius: 5px;
+  margin-top: 20px;
+  outline: solid 2px grey;
   transition: 0.3s;
-  
 }
 
 .total-amount > span {
@@ -191,10 +193,29 @@ ul {
 }
 
 .total-buy {
-  text-align: left;
-  font-weight: normal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
 }
-.total-buy > span {
-  margin-left: 10px;
+
+.buy-button {
+  padding: 12px 25px;
+  border: none;
+  background-color: #6a1b9a;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #4a148c;
+}
+
+.cart-empty-title {
+  margin-top: 20px;
+  font-weight: bold;
+  color: grey;
 }
