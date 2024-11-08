@@ -23,7 +23,7 @@ const renderProducts = async () => {
     productTitle.innerText = item.title;
     productDescription.innerText = item.description;
     productPrice.innerText = `${item.price}$`;
-    productBuyBtn.innerText = "Додати в кошик";
+    productBuyBtn.innerText = "Піднести до магічної скринькі";
     productBuyBtn.addEventListener("click", () => addToCart(item));
     //
     productPriceSection.append(productPrice, productBuyBtn);
@@ -96,10 +96,10 @@ const addToCart = (product) => {
   image.src = product.image;
   title.innerText = product.title;
   price.innerText = `${product.price}$`;
-  quantity.type = "Кількість";
+  quantity.type = "Магічний підрахунок";
   quantity.value = 1;
   quantity.min = 1;
-  removeBtn.innerText = "Видалити";
+  removeBtn.innerText = "Розвіяти, як дим";
   emptyCartTitle.style.display = "none";
   cartListWrapper.style.display = "block";
   // 
