@@ -28,6 +28,11 @@ ul {
   height: 440px;
   text-align: center;
   margin-bottom: 30px;
+  outline-style: ridge;
+  outline-color:grey;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 10px;
 }
 
 .product-item > img {
@@ -50,6 +55,7 @@ ul {
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+
 }
 
 .product-item-price > span {
