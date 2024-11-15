@@ -232,14 +232,12 @@ ul {
   z-index: 1000;
 }
 
-/* Modal image */
 .image-modal img {
   max-width: 90%;
   max-height: 80%;
   object-fit: contain;
 }
 
-/* Close button */
 .close-button {
   position: absolute;
   top: 20px;

@@ -19,14 +19,13 @@ const renderProducts = async () => {
     productWrapper.classList.add("product-item");
     productPriceSection.classList.add("product-item-price");
     productImg.src = item.image;
-    productImg.alt = item.title; // Додаємо alt текст для доступності
+    productImg.alt = item.title; 
     productTitle.innerText = item.title;
     productDescription.innerText = item.description;
     productPrice.innerText = `${item.price}$`;
     productBuyBtn.innerText = "Піднести до магічної скриньки";
     productBuyBtn.addEventListener("click", () => addToCart(item));
 
-    // Додаємо слухач події для кліку по зображенню, щоб показати модальне вікно
     productImg.addEventListener("click", () => zoomImage(productImg));
 
     productPriceSection.append(productPrice, productBuyBtn);
@@ -40,7 +39,6 @@ const renderProducts = async () => {
   }
 };
 
-// Функція для обробки ефекту збільшення зображення
 const zoomImage = (image) => {
   const modal = document.createElement("div");
   modal.classList.add("image-modal");
@@ -50,7 +48,6 @@ const zoomImage = (image) => {
   modalImg.alt = image.alt;
   modal.appendChild(modalImg);
 
-  // Додаємо кнопку для закриття модального вікна
   const closeButton = document.createElement("button");
   closeButton.innerText = "Close";
   closeButton.classList.add("close-button");
@@ -63,7 +60,6 @@ const zoomImage = (image) => {
   document.body.appendChild(modal);
 };
 
-// Інші функції для кошика залишаються без змін
 
 const removeProductFromCart = (event) => {
   event.target.parentElement.parentElement.remove();
