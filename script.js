@@ -1,4 +1,4 @@
-const getProducts = async () => { 
+const getProducts = async () => {  
   const response = await fetch("test");
   const products = await response.json();
   return products;
@@ -19,11 +19,15 @@ const renderProducts = async () => {
     productWrapper.classList.add("product-item");
     productPriceSection.classList.add("product-item-price");
     productImg.src = item.image;
+    productImg.alt = item.title; // Додаємо alt текст для доступності
     productTitle.innerText = item.title;
     productDescription.innerText = item.description;
     productPrice.innerText = `${item.price}$`;
-    productBuyBtn.innerText = "Піднести до магічної скринькі";
+    productBuyBtn.innerText = "Піднести до магічної скриньки";
     productBuyBtn.addEventListener("click", () => addToCart(item));
+
+    // Додаємо слухач події для кліку по зображенню, щоб показати модальне вікно
+    productImg.addEventListener("click", () => zoomImage(productImg));
 
     productPriceSection.append(productPrice, productBuyBtn);
     productWrapper.append(
@@ -35,6 +39,31 @@ const renderProducts = async () => {
     container.append(productWrapper);
   }
 };
+
+// Функція для обробки ефекту збільшення зображення
+const zoomImage = (image) => {
+  const modal = document.createElement("div");
+  modal.classList.add("image-modal");
+  
+  const modalImg = document.createElement("img");
+  modalImg.src = image.src;
+  modalImg.alt = image.alt;
+  modal.appendChild(modalImg);
+
+  // Додаємо кнопку для закриття модального вікна
+  const closeButton = document.createElement("button");
+  closeButton.innerText = "Close";
+  closeButton.classList.add("close-button");
+  closeButton.addEventListener("click", () => {
+    modal.remove();
+  });
+  
+  modal.appendChild(closeButton);
+
+  document.body.appendChild(modal);
+};
+
+// Інші функції для кошика залишаються без змін
 
 const removeProductFromCart = (event) => {
   event.target.parentElement.parentElement.remove();
@@ -152,7 +181,6 @@ buyButton.addEventListener("click", async () => {
     alert("Неможливо завершити покупку. Спробуйте пізніше.");
   }
 });
-
 
 const clearCart = () => {
   const cartList = document.querySelector(".cart-list");
