@@ -49,7 +49,7 @@ const zoomImage = (image) => {
   modal.appendChild(modalImg);
 
   const closeButton = document.createElement("button");
-  closeButton.innerText = "Close";
+  closeButton.innerText = "Закрити";
   closeButton.classList.add("close-button");
   closeButton.addEventListener("click", () => {
     modal.remove();
@@ -144,39 +144,7 @@ const checkCartEmpty = () => {
   }
 };
 
-const buyButton = document.querySelector(".buy-button");
-buyButton.addEventListener("click", async () => {
-  const cartItems = document.getElementsByClassName("cart-list-item");
-  if (cartItems.length === 0) {
-    alert("Ваш кошик порожній! Додайте товари, щоб завершити покупку.");
-    return;
-  }
 
-  const productsInCart = [];
-  for (const item of cartItems) {
-    const id = +item.getAttribute("id");
-    const title = item.querySelector("h4").innerText;
-    const quantity = item.querySelector(".cart-list-quantity-section > input").value;
-    productsInCart.push({ id, title, quantity });
-  }
-
-  try {
-    const response = await fetch("checkout-endpoint", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items: productsInCart }),
-    });
-    if (response.ok) {
-      alert("Дякуємо за покупку! Ваше замовлення успішно оформлено.");
-      clearCart();
-    } else {
-      alert("Сталася помилка при оформленні замовлення.");
-    }
-  } catch (error) {
-    console.error("Помилка:", error);
-    alert("Неможливо завершити покупку. Спробуйте пізніше.");
-  }
-});
 
 const clearCart = () => {
   const cartList = document.querySelector(".cart-list");
@@ -184,5 +152,19 @@ const clearCart = () => {
   updateCartTotal();
   checkCartEmpty();
 };
+
+const buyButton = document.querySelector(".buy-button");
+
+buyButton.addEventListener("click", () => {
+  const cartItems = document.getElementsByClassName("cart-list-item");
+  
+  if (cartItems.length === 0) {
+    alert("Ваша магічна скринька порожня!");
+    return;
+  }
+  
+  alert("Покупка оформлена! Дякуємо за придбання артефактів.");
+  clearCart();
+});
 
 renderProducts();
